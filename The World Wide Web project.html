@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="The WorldWideWeb (W3) project: a wide-area hypermedia information retrieval initiative.">
+  <title>The World Wide Web project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --ink: #1a1f2b;
+      --muted: #5b6375;
+      --rule: #d6dae2;
+      --link: #1f3fd1;
+      --visited: #6a2c91;
+      --focus: #f2b705;
+      color-scheme: light;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #12151c;
+        --ink: #e6e8ee;
+        --muted: #9aa2b4;
+        --rule: #2c3240;
+        --link: #8fa7ff;
+        --visited: #c59bea;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #12151c;
+      --ink: #e6e8ee;
+      --muted: #9aa2b4;
+      --rule: #2c3240;
+      --link: #8fa7ff;
+      --visited: #c59bea;
+      color-scheme: dark;
+    }
+    *, *::before, *::after { box-sizing: inherit; }
+    html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Literata", Georgia, "Times New Roman", serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 8vw, 6rem) 1.5rem 3rem;
+    }
+
+    h1 {
+      font-size: clamp(2.75rem, 9vw, 5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 0 0 1.5rem;
+    }
+
+    .lede {
+      font-size: 1.25rem;
+      line-height: 1.55;
+      margin: 0 0 1.25rem;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    a {
+      color: var(--link);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+    a:visited { color: var(--visited); }
+    a:hover { text-decoration-thickness: 0.16em; }
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .directory {
+      margin: 3rem 0 0;
+      padding: 0;
+      border-top: 2px solid var(--ink);
+    }
+    .entry {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem 2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .entry dt {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    .entry dd {
+      margin: 0;
+      color: var(--muted);
+    }
+    .entry dd a { color: var(--link); }
+    .entry dd a:visited { color: var(--visited); }
+
+    @media (min-width: 40rem) {
+      .entry { grid-template-columns: 12rem 1fr; }
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9375rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>World Wide Web</h1>
+      <p class="lede">
+        The WorldWideWeb (W3) is a wide-area
+        <a href="https://info.cern.ch/hypertext/WWW/WhatIs.html">hypermedia</a>
+        information retrieval initiative aiming to give universal access
+        to a large universe of documents.
+      </p>
+      <p>
+        Everything there is online about W3 is linked directly or indirectly
+        to this document, including an
+        <a href="https://info.cern.ch/hypertext/WWW/Summary.html">executive summary</a> of the project,
+        <a href="https://info.cern.ch/hypertext/WWW/Administration/Mailing/Overview.html">mailing lists</a>,
+        <a href="https://info.cern.ch/hypertext/WWW/Policy.html">policy</a>,
+        November’s <a href="https://info.cern.ch/hypertext/WWW/News/9211.html">W3 news</a> and
+        <a href="https://info.cern.ch/hypertext/WWW/FAQ/List.html">frequently asked questions</a>.
+      </p>
+    </header>
+
+    <nav aria-label="Project directory">
+      <dl class="directory">
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/DataSources/Top.html">What’s out there?</a></dt>
+          <dd>
+            Pointers to the world’s online information,
+            <a href="https://info.cern.ch/hypertext/DataSources/bySubject/Overview.html">subjects</a>,
+            <a href="https://info.cern.ch/hypertext/DataSources/WWW/Servers.html">W3 servers</a>, etc.
+          </dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/Help.html">Help</a></dt>
+          <dd>On the browser you are using.</dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/Status.html">Software products</a></dt>
+          <dd>
+            A list of W3 project components and their current state, e.g.
+            <a href="https://info.cern.ch/hypertext/WWW/LineMode/Browser.html">Line Mode</a>,
+            X11 <a href="https://info.cern.ch/hypertext/WWW/Status.html#35">Viola</a>,
+            <a href="https://info.cern.ch/hypertext/WWW/NeXT/WorldWideWeb.html">NeXTStep</a>,
+            <a href="https://info.cern.ch/hypertext/WWW/Daemon/Overview.html">servers</a>,
+            <a href="https://info.cern.ch/hypertext/WWW/Tools/Overview.html">tools</a>,
+            <a href="https://info.cern.ch/hypertext/WWW/MailRobot/Overview.html">mail robot</a>,
+            <a href="https://info.cern.ch/hypertext/WWW/Status.html#57">library</a>.
+          </dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/Technical.html">Technical</a></dt>
+          <dd>Details of protocols, formats, program internals etc.</dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/Bibliography.html">Bibliography</a></dt>
+          <dd>Paper documentation on W3 and references.</dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/People.html">People</a></dt>
+          <dd>A list of some people involved in the project.</dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/History.html">History</a></dt>
+          <dd>A summary of the history of the project.</dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/WWW/Helping.html">How can I help?</a></dt>
+          <dd>If you would like to support the web.</dd>
+        </div>
+
+        <div class="entry">
+          <dt><a href="https://info.cern.ch/hypertext/README.html">Getting code</a></dt>
+          <dd>
+            Getting the code by
+            <a href="https://info.cern.ch/hypertext/WWW/LineMode/Defaults/Distribution.html">anonymous FTP</a>, etc.
+          </dd>
+        </div>
+      </dl>
+    </nav>
+
+    <footer>
+      <p>Originally published at CERN in 1992. Links point to the restored original pages at info.cern.ch.</p>
+    </footer>
+  </main>
+</body>
+</html>
